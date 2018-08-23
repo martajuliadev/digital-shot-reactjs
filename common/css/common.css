@@ -242,6 +242,7 @@
   }
 
   .collage-image {
-      margin: 20px;
+    /* display: inline-block !important; */
+    margin: 20px !important;
   }
   

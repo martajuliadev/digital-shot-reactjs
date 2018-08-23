@@ -39,31 +39,29 @@
                 <div style="display:flex; 
                         justify-content: flex-end;
                         align-items: center;
+                        padding-bottom: 50px;
             ">
                     <img style="margin: 0; width: 20%; background: none" class="plain" src="common/img/Capgemini_Logo_Color_RGB.png" alt="Capgemini"
                     />
                 </div>
 
-                <h1 style="font-size: 2.1em">
+                <h2 style="font-size: 1.9em" class="secondaryFont">
                     <div><span class="accent">React.js</span></div>
-                    <div>why are you getting more and more</div>
-                    <div>i <span class="accent">popular</span></div>
-                </h1>
+                    <div>-why are you getting</div>
+                    <div>more and more <span class="accent">popular?</span></div>
+                </h2>
 
                 <div style="display:flex; 
                         justify-content: flex-end;
+                        padding-top: 40px;
             ">
                     <span class="specialFont">Marta Stopyra</span>
                 </div>
             </section>
-
-            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                <h2 style="font-size: 1.7em" class="--cap-blue">The begin of React</h2>
-            </section>
-
+            
             <section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <h2 style="font-size: 1.7em" class="--cap-blue">Who use it nowadays?</h2>
+                    <h2 style="font-size: 1.7em" class="primaryFont">Who use React nowadays?</h2>
                     <div class="collage">
                         <img class="collage-image" src="common/img/airbnb.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
                         <img class="collage-image" src="common/img/fb.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
@@ -81,12 +79,18 @@
                 </section>
             </section>
 
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <div class="primaryFont">Position of React basing on <a class="accent" href="https://stateofjs.com/2017/front-end/results">stateofjs.com</a> </div>
+                <img src="common/img/stateofjs.PNG">
+                <div class="fragment specialFont"><span class="accent">React</span> as a dominant player</div>
+            </section>
+
             <section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <h2 style="font-size: 1.9em">React.js </h2>
                     <p>(<a href="https://reactjs.org/">v16.4.2</a>)</p>
-                    <h2 style="font-size: 1.7em" class="accent">What is it?</h2>
-                    <p class="fragment">A<span class="accent"><strong> Javascript library </strong></span>for building user interfaces
+                    <div style="font-size: 1.1em" class="primaryFont">What is it?</div>
+                    <p class="fragment">A<span class="accent"><strong> Javascript library </strong></span>for building user interfaces.
                     </p>
                     <p class="fragment">Not a tool, framework, language.</p>
                 </section>
@@ -180,13 +184,13 @@
                 </section>
                 <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <textarea data-template>
-                            Kod w JSX:
+                            JSX code:
                             ```
                             const element = <h1>Hello, world!</h1>;
                             const container = document.getElementById('root');
                             ReactDOM.render(element, container);
                                                         ```
-                                                        Kod po transpilacji do JS:
+                                                        Code after compilation to JS:
                                                         ```
                                                         const element = React.createElement(
                             'h1',
@@ -240,9 +244,9 @@
                         </ul>
                     </section>
                     <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                        <div class="specialFont">React creates an <span class="accent">in-memory data structure cache</span> which computes the made changes and then updates the browser. This allows a special feature which enable programmer to code as if whole page is rendered on each change whereas react library <span class="accent">only renders components which actually change</span>.</div>
+                        <div class="specialFont">React creates an <span class="accent">in-memory data structure cache</span> which computes the made changes and then updates the browser. This allows for a special feature enabling programmer to code as if whole page is rendered on each change whereas react library <span class="accent">only renders components which actually change</span>.</div>
                         <aside class="notes">
-                                React creates an in-memory data structure cache which computes the changes made and then updates the browser. This allows a special feature which enable programmer to code as if whole page is render on each change where as react library only render components which actually change.
+                                React creates an in-memory data structure cache which computes the made changes and then updates the browser. This allows a special feature which enable programmer to code as if whole page is render on each change where as react library only render components which actually change.
 
                                 When your component is first initialized, the   method is called, generating a lightweight representation of your view. From that representation, a string of markup is produced, and injected into the document. When your data changes, the method is called again. In order to perform updates as efficiently as possible, we diff the return value from the previous call to with the new one, and generate a minimal set of changes to be applied to the DOM(Document Object Model).
                                 
@@ -261,23 +265,23 @@
             </section>
 
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-            <div>Single way data flow (<em>one-way-data-binding</em>)</div>
+            <div class="primaryFont">Single way data flow (<em>one-way-data-binding</em>)</div>
                 <img src="common/img/one_way_data_binding.png" style="width: 50%; height: 50%;">
                 <aside class="notes">
                         A unidirectional data flow means that when designing a React app you often nest child components within higher-order parent components.
                         Wspomniec, ze w dół przekazywane dane, niezmienne, w górę zdarzenia, powiedzieć o koncepcji komponentów kontenerowych i odpowiedzialnych za prezentację danych 
                 </aside>
             </section>
-            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+            <!-- <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
             <h3>Angular vs React.js</h3>
-            </section>
+            </section> -->
             <section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <h3>Stylowanie komponentów w React.js</h3>
-                    <div class="fragment">Inline styling</div>
-                    <div class="fragment">CSS stylesheet</div>
-                    <div class="fragment">CSS modules</div>
-                    <div class="fragment">Styled-components</div>
+                    <h3 class="primaryFont">Components styling in React</h3>
+                    <div class="fragment primaryFont">Inline styling</div>
+                    <div class="fragment primaryFont">CSS stylesheet</div>
+                    <div class="fragment primaryFont">CSS modules</div>
+                    <div class="fragment primaryFont">Styled-components</div>
                 </section>
                 <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <textarea data-template>
@@ -308,8 +312,8 @@
                             import './DottedBox.css';
                             
                             const DottedBox = () => (
-                              <div className="DottedBox">
-                                <p className="DottedBox_content">CSS styling</p>
+                              <div className="dotted-box">
+                                <p className="dotted-box-content">CSS styling</p>
                               </div>
                             );
                         ```
@@ -391,12 +395,13 @@
             </section>
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                 <a class="accent" href="https://github.com/facebook/create-react-app">create-react-app</a>
+                <div class="specialFont" style="font-size: 0.7em;">⬆️ Just use it </div>
             </section>
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-               <div class="fragment">npm install -g create-react-app</div>
-               <div class="fragment">create-react-app /app-name/</div>
-               <div class="fragment">cd /app-name/</div>
-               <div class="fragment">npm start</div>
+               <div class="fragment primaryFont">npm install -g create-react-app</div>
+               <div class="fragment primaryFont">create-react-app /app-name/</div>
+               <div class="fragment primaryFont">cd /app-name/</div>
+               <div class="fragment primaryFont">npm start</div>
             </section>
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                 <img src="common/img/how_to_start.png">
@@ -409,44 +414,40 @@
             <a href="https://storybook.js.org/">
                 <img src="common/img/storybook.svg" href="https://storybook.js.org/" style="background:none; border:none; box-shadow:none; height: 65%; width:65%;">
             </a>
-            <div class="specialFont" style="font-size: 0.7em;">⬆️ Click on the logo to get to know more </div>
+            <div class="specialFont" style="font-size: 0.7em;">⬆️ Click to get to know more </div>
             
             </section>
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                 <img src="common/img/storybook.gif" style="background:none; border:none; box-shadow:none; height: 85%; width:85%;">
-                <div style="font-size: 0.7em;">Look at the live examples <a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>here</strong></a>.</div>
-                <div style="font-size: 0.7em;"><a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>Addons</strong></a> implement additional functionalities what makes Storybook even more util.</div>
+                <div class="primaryFont" style="font-size: 0.7em;">Look at the live examples <a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>here</strong></a>.</div>
+                <div class="primaryFont" style="font-size: 0.7em;"><a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>Addons</strong></a> implement additional functionalities which make Storybook even more util.</div>
             </section>
     </section>
 
     <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-        <div>Want to see more elements of React.js ecosystem?</div>
-        <div> Go to <a class="accent" href="https://github.com/enaqx/awesome-react">awesome-react</a></div>
-        <img src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: 45%; width:45%;">
+        <div class="primaryFont">Want to see more elements of React.js ecosystem?</div>
+        <div class="primaryFont"> Go to <a class="accent" href="https://github.com/enaqx/awesome-react">awesome-react</a>!</div>
+        <img src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: 40%; width:40%;  display: inline-block; padding-top: 40px;">
     </section>
     
     <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-        <div class="specialFont"><strong>Project ROAD</strong></div>
-        <!-- <div class="collage">
-            
-            
-        </div> -->
+        <div class="specialFont" style="font-size: 1.2em;"><strong>Project ROAD</strong></div>
         <div class="dw-row"> 
                 <div class="dw-column">
-                        <img class="collage-image" src="common/img/storybook.svg" style="background:none; border:none; box-shadow:none; height: 35%; width:35%;">
-                        <img class="collage-image" src="common/img/styled-components.png" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <img class="collage-image" src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <img class="collage-image" src="common/img/boostrap.svg" style="background:none; border:none; box-shadow:none; height: 15%; width:15%;">
+                    <img class="collage-image" src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
+                        <img class="collage-image" src="common/img/storybook.svg" style="background:none; border:none; box-shadow:none; height: auto; width:70%;">
+                        <img class="collage-image" src="common/img/styled-components.png" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
+                        <img class="collage-image" src="common/img/boostrap.svg" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
                 </div>
                 <div class="dw-column">
-                        <img src="common/img/dw-team1.jpg">
-                        <img src="common/img/dw-team2.jpg">
+                        <img src="common/img/dw-team1.jpg" style="width: 80%; height: auto;">
+                        <img src="common/img/dw-team2.jpg" style="width: 80%; height: auto;">
                     </div>
                 <div class="dw-column">
-                        <img class="collage-image" src="common/img/nodejs.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <span class="collage-image specialFont">server-side rendering</span>
-                        <img class="collage-image" src="common/img/graphql.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <img class="collage-image" src="common/img/express.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                    <img class="collage-image" src="common/img/nodejs.svg" style="background:none; border:none; box-shadow:none; height: auto; width:100%;">
+                    <span class="collage-image specialFont" style="padding-bottom: 30px; padding-top: 30px; display: inline-block;">server-side rendering</span>
+                    <img class="collage-image" src="common/img/graphql.svg" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
+                    <img class="collage-image" src="common/img/express.svg" style="background:none; border:none; box-shadow:none; height: auto; width:60%;">
                 </div> 
 
                 <!-- <div class="dw-column">
@@ -462,7 +463,7 @@
                     ">
             <img style="margin: 0; width: 20%; background: none" class="plain" src="common/img/Capgemini_Logo_Color_RGB.png" alt="Capgemini"/>
         </div>
-        <div style="font-size: 0.9em;">Now is the special time for questions and discussion.</div>
+        <div style="font-size: 0.9em;">Finally there is a special time for questions and discussion.</div>
         <div style="font-size: 0.9em;">Thank you! 💚</div>
     </section>
 

@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>React.js - intro</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Dosis|Indie+Flower|Slabo+27px" rel="stylesheet">
+
+    <link rel="icon" href="common/img/favicon.ico">
+
+    <link rel="stylesheet" href="reveal.js-3.6.0/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css">
+    <link rel="stylesheet" href="common/css/common.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js-3.6.0/lib/css/zenburn.css">
+    <!-- <link rel="stylesheet" href="/path/to/styles/dark.css"> -->
+    <!-- <link rel="stylesheet" href="common/css/highlight/github.css"> -->
+
+    <!-- Printing and PDF exports -->
+    <!-- <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script> -->
+</head>
+
+<body>
+    <div class="devon reveal">
+        <div class="slides">
+
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <div style="display:flex; 
+                        justify-content: flex-end;
+                        align-items: center;
+            ">
+                    <img style="margin: 0; width: 20%; background: none" class="plain" src="common/img/Capgemini_Logo_Color_RGB.png" alt="Capgemini"
+                    />
+                </div>
+
+                <h1 style="font-size: 2.1em">
+                    <div><span class="accent">React.js</span></div>
+                    <div>- kilka słów o coraz popularniejszej </div>
+                    <div>i <span class="accent">technologii</span></div>
+                </h1>
+
+                <div style="display:flex; 
+                        justify-content: flex-end;
+            ">
+                    <span class="specialFont">Marta Stopyra</span>
+                </div>
+            </section>
+
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <h2 style="font-size: 1.7em" class="--cap-blue">Skąd wziął się React.js?</h2>
+            </section>
+
+            <section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <h2 style="font-size: 1.7em" class="--cap-blue">Kto go obecnie używa?</h2>
+                    <div class="collage">
+                        <img class="collage-image" src="common/img/airbnb.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                        <img class="collage-image" src="common/img/fb.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
+                        <img class="collage-image" src="common/img/instagram.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
+                        <img class="collage-image" src="common/img/whatsapp.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
+                        <img class="collage-image" src="common/img/netflix.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                        <img class="collage-image" src="common/img/NewYorkTimes.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                        <img class="collage-image" src="common/img/dropbox.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
+                        <img class="collage-image" src="common/img/Codecademy.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                        <img class="collage-image" src="common/img/atlassian.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                        <img class="collage-image" src="common/img/twitter.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+                    </div>
+                    <p>Fb official- <a class="accent" href="https://github.com/facebook/react/wiki/Sites-Using-React
+                        ">apps in React</a></p>
+                </section>
+            </section>
+
+            <section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <h2 style="font-size: 1.9em">React.js </h2>
+                    <p>(<a href="https://reactjs.org/">v16.4.2</a>)</p>
+                    <h2 style="font-size: 1.7em" class="accent">Czym jest?</h2>
+                    <p class="fragment">React jest <span class="accent">biblioteką javascriptową </span>do budowania interfejsów
+                        użytkownika.
+                    </p>
+                    <p class="fragment">Nie narzędziem, frameworkiem, językiem.</p>
+                </section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <div class="fragment primaryFont">Pozwala na projektowanie prostych widoków dla każdego ze stanów aplikacji</div>
+                    <div class="fragment primaryFont">Jest oparty na <span class="accent">komponentach</span>.</div>
+                    <div class="fragment primaryFont">Kiedy nasze dane się zmieniają, renderujemy po prostu odpowiedni komponent.</div>
+                </section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <pre><code data-trim data-noescape>
+                            class HelloMessage extends React.Component {
+                                render() {
+                                  return (
+                                    <div>
+                                      Hello {this.props.name}
+                                    </div>
+                                  );
+                                }
+                              }
+                    </code></pre>
+                </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <textarea data-template>
+                    ## Komponenty dzielimy na klasowe i funkcyjne
+
+                    ```
+                    class Welcome extends React.Component {
+                        render() {
+                          return (
+                            <div>
+                              Hello {this.props.name}
+                            </div>
+                          );
+                        }
+                      }
+                    ```
+                    ```
+                    function Welcome(props) {
+                        return <h1>Hello, {props.name}</h1>;
+                      }
+                    ```
+                    </textarea>
+                </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <textarea data-template>
+                    Komponenty mogą być w sobie zagnieżdżane
+                    ```
+                      function App() {
+                        return (
+                          <div>
+                            <Welcome name="Sara" />
+                            <Welcome name="Cahal" />
+                            <Welcome name="Edite" />
+                          </div>
+                        );
+                      }
+                      
+                      ReactDOM.render(
+                        <App />,
+                        document.getElementById('root')
+                      );
+                    ```
+                </textarea>
+                <aside class="notes">
+                        React components implement a render()method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
+
+                        Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.
+                    </aside>
+                </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <textarea data-template>
+                        Komponenty mogą mieć [props](https://reactjs.org/docs/components-and-props.html) oraz [state](https://reactjs.org/docs/state-and-lifecycle.html)
+                        ```
+                        class Timer extends React.Component {
+                            constructor(props) {
+                              super(props);
+                              this.state = { seconds: 0 };
+                            }
+                          
+                            tick() {
+                              this.setState(prevState => ({
+                                seconds: prevState.seconds + 1
+                              }));
+                            }
+                          
+                            componentDidMount() {
+                              this.interval = setInterval(() => this.tick(), 1000);
+                            }
+                        ```
+                    </textarea>
+                </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <div class="fragment primaryFont"><a class="accent" href="https://reactjs.org/docs/introducing-jsx.html">JSX </a>jest dodatkowym syntaktycznym rozszerzeniem powszechnie wykorzystywanym w React'ie.</div>
+                    <div class="fragment primaryFont">Jest lukrem składniowym</div>
+                    <div class="fragment primaryFont">Produkuje Reactowe elementy</div>
+
+                    <aside class="notes">
+                            React uses JSX for templating instead of regular JavaScript. It is not    necessary to use it, but there are some pros that comes with it.JSX is faster because it performs optimization while compiling code to JavaScript.
+                            It is also type-safe and most of the errors can be caught during compilation.
+                            JSX makes it easier and faster to write templates if you are familiar with HTML.
+                    </aside>
+                </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <textarea data-template>
+                            ### JSX- przykład
+                            Kod w JSX:
+                            ```
+                            const element = <h1>Hello, world!</h1>;
+const container = document.getElementById('root');
+ReactDOM.render(element, container);
+                            ```
+                            Kod po transpilacji do JS:
+                            ```
+                            const element = React.createElement(
+  'h1',
+  null,
+  'Hello, world!'
+);
+const container = document.getElementById('root');
+ReactDOM.render(element, container);
+                            ```
+                        </textarea>
+                </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <textarea data-template>
+                        Jak to może wyglądać w praktyce?
+                        ```javascript
+                        export const ComponentWithData = ({
+                            data: {
+                              error, loading, i18n, ...restData
+                            }, render = noop,
+                          }) => {
+                            if (loading) {
+                              return <LoadingMessage />;
+                            }
+                          
+                            if (error) {
+                              return <ErrorMessage error={error} />;
+                            }
+                          
+                            if (i18n) {
+                              setTranslations(JSON.parse(i18n.all));
+                            }
+                            return render(restData);
+                          };
+
+                          ```
+                    </textarea>
+                </section>
+            </section>
+
+
+            <section>
+                    <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                        <h2>Virtualny DOM</h2>
+                        <img src="common/img/VDOM.png">
+                        <!-- <div class="fragment primaryFont">Pozwala na projektowanie prostych widoków dla każdego ze stanów aplikacji</div>
+                        <div class="fragment primaryFont">Jest oparty na <span class="accent">komponentach</span>.</div>
+                        <div class="fragment primaryFont">Kiedy nasze dane się zmieniają, renderujemy po prostu odpowiedni komponent.</div> -->
+                    </section>
+                    <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                        <div>React tworzy w pamięci strukturę danych służącą jako cache, w której obliczane są wprowadzone do widoków zmiany. Na ich podstawie aktualizowane są rzeczywiste widoki w przeglądarce.</div>
+                        <aside class="notes">
+                                React creates an in-memory data structure cache which computes the changes made and then updates the browser. This allows a special feature which enable programmer to code as if whole page is render on each change where as react library only render components which actually change.
+
+                                When your component is first initialized, the   method is called, generating a lightweight representation of your view. From that representation, a string of markup is produced, and injected into the document. When your data changes, the method is called again. In order to perform updates as efficiently as possible, we diff the return value from the previous call to with the new one, and generate a minimal set of changes to be applied to the DOM(Document Object Model).
+                                
+                                React.js JSX :  React uses JSX for templating instead of regular JavaScript. It is not    necessary to use it, but there are some pros that comes with it.JSX is faster because it performs optimization while compiling code to JavaScript.
+                                It is also type-safe and most of the errors can be caught during compilation.
+                                JSX makes it easier and faster to write templates if you are familiar with HTML.
+                                
+                                Difference between DOM and Virtual DOM :
+                                DOM :    DOM stands for Document Object Model and is an abstraction of a structured text. For web developers, this text is an HTML code, and the DOM is simply called HTML DOM. Elements of HTML become nodes in the DOM.
+                                So, while HTML is a text, the DOM is an in-memory representation of this text.
+                                The HTML DOM provides an interface (API) to traverse and modify the nodes. It contains methods like or .
+                                Virtual DOM :  The Virtual DOM was not invented by React, but React uses it and provides it for free.
+                                The Virtual DOM is an abstraction of the HTML DOM. It is lightweight and detached from the browser-specific implementation details. Since the DOM itself was already an abstraction, the virtual DOM is, in fact, an abstraction of an abstraction.
+                        </aside>
+                    </section>
+            </section>
+
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+            <h3>Dane przekazujemy tylko w jedną stronę (<em>ang. one way data binding</em>)</h2>
+                <img src="common/img/one_way_data_binding.png" style="width: 50%; height: 50%;">
+                <aside class="notes">
+                        A unidirectional data flow means that when designing a React app you often nest child components within higher-order parent components.
+                        Wspomniec, ze w dół przekazywane dane, niezmienne, w górę zdarzenia, powiedzieć o koncepcji komponentów kontenerowych i odpowiedzialnych za prezentację danych 
+                </aside>
+            </section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+            <h3>Angular vs React.js</h3>
+            </section>
+            <section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <h3>Stylowanie komponentów w React.js</h3>
+                    <div class="fragment">Stylowanie inline</div>
+                    <div class="fragment">Osobne arkusze styli CSS</div>
+                    <div class="fragment">Moduły CSS</div>
+                    <div class="fragment">Styled-components</div>
+                </section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                        <div>Stylowanie inline</div>
+                        <pre><code data-trim data-noescape>
+                                const divStyle = {
+                                    margin: '40px',
+                                    border: '5px solid pink'
+                                  };
+                                  const pStyle = {
+                                    fontSize: '15px',
+                                    textAlign: 'center'
+                                  };
+                                  
+                                  const Box = () => (
+                                    <div style={divStyle}>
+                                      <p style={pStyle}>Get started with inline style</p>
+                                    </div>
+                                  );
+                        </code></pre>
+                </section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <div>Osobne arkusze styli CSS</div>
+                    <pre><code data-trim data-noescape>
+                            import React from 'react';
+                            import './DottedBox.css';
+                            
+                            const DottedBox = () => (
+                              <div className="DottedBox">
+                                <p className="DottedBox_content">Get started with CSS styling</p>
+                              </div>
+                            );
+                    </code></pre>
+                </section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <div>Moduły CSS</div>
+                    <pre><code data-trim data-noescape>
+                            import React from 'react';
+                            import styles from './DashedBox.css';
+                            
+                            const DashedBox = () => (
+                            <div className={styles.container}>
+                                <p className={styles.content}>Get started with CSS Modules style</p>
+                            </div>
+                            );
+                    </code></pre>
+                </section>
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <textarea data-template>
+                        ## Styled-components
+                        ```
+                        const BasicZone = ({ text }) => (
+                            <div>
+                            {text}
+                            </div>
+                        );
+                        
+                        export const StyledBasicZone = styled(BasicZone)`
+                            margin-bottom: 10px;
+                            margin-top: 10px;
+                            padding: 10px;
+                        `;
+                        ```
+                    </textarea>
+                    <!-- <div>Styled-components</div>
+                    <pre><code data-trim data-noescape>
+                            const BasicZone = ({ text }) => (
+                                <div>
+                                {text}
+                                </div>
+                            );
+                            
+                            export const StyledBasicZone = styled(BasicZone)`
+                                margin-bottom: 10px;
+                                margin-top: 10px;
+                                padding: 10px;
+                            `;		
+                    </code></pre> -->
+            </section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <div>Styled-components</div>
+                <pre><code data-trim data-noescape>
+                        export const Text = ({
+                            isA = 'span',
+                            children,
+                            className,
+                            ...restProps
+                        }) => {
+                            const Tag = isA;
+                            return (
+                                <Tag className={className} {...restProps}>
+                                    {children}
+                                </Tag>
+                            );
+                        };
+                </code></pre>
+
+                <pre><code data-trim data-noescape>
+                        export const StyledTextNoColor = styled(Text)`
+                        font-family: NotoSans;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    `;
+                </code></pre>
+            </section>
+    </section>
+
+    <section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <h2>How to start?</h2>
+            </section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <a class="accent" href="https://github.com/facebook/create-react-app">create-react-app</a>
+            </section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+               <div class="fragment">npm install -g create-react-app</div>
+               <div class="fragment">create-react-app <app-name></div>
+               <div class="fragment">cd <app-name></div>
+               <div class="fragment">npm start</div>
+            </section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <img src="common/img/how_to_start.png">
+            </section>
+    </section>
+    <section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+            <div style="font-size: 1.2em;"><a class="accent" href="https://storybook.js.org/">Storybook</a> - cooperation with Design Team has been never so easy! No deployements needed.</div>
+            <img src="common/img/storybook.svg" style="background:none; border:none; box-shadow:none; height: 75%; width:75%;">
+            </section>
+            <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <img src="common/img/storybook.gif" style="background:none; border:none; box-shadow:none; height: 85%; width:85%;">
+                <div style="font-size: 0.7em;">Live examples can be find <a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>here</strong></a>.</div>
+                <div style="font-size: 0.7em;"><a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>Addons</strong></a> implement additional functionalities what makes Storybook even more util.</div>
+            </section>
+    </section>
+
+    <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+        <h3>Want to see more elements of React.js ecosystem? Visit <a class="accent" href="https://github.com/enaqx/awesome-react">awesome-react</a></h3>
+        <img src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: 55%; width:55%;">
+    </section>
+    
+    <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+        <h2>Project DW ROAD</h2>
+        <div class="collage">
+            <img class="collage-image" src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+            <span class="collage-image specialFont">server-side rendering</span>
+            <img class="collage-image" src="common/img/graphql.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+            <span class="collage-image specialFont">create-react-app</span>
+            <img class="collage-image" src="common/img/storybook.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
+            <span class="collage-image specialFont">styled-components</span>
+            <span class="collage-image specialFont">React Router</span>
+            <img class="collage-image" src="common/img/boostrap.svg" style="background:none; border:none; box-shadow:none; height: 15%; width:15%;">
+        </div>
+
+    </section>
+
+    <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+    </section>
+
+        </div>
+    </div>
+
+    <script src="reveal.js-3.6.0/lib/js/head.min.js"></script>
+    <script src="reveal.js-3.6.0/js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [
+                { src: 'reveal.js-3.6.0/plugin/markdown/marked.js' },
+                { src: 'reveal.js-3.6.0/plugin/markdown/markdown.js' },
+                { src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true },
+                {
+                    src: 'reveal.js-3.6.0/plugin/highlight/highlight.js', async: true, callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>

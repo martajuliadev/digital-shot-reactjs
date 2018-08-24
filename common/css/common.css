@@ -160,6 +160,9 @@
        font-family: var(--secondary-font-family)
   }
   
+  .reveal .slides a {
+    text-decoration: underline;
+  }
   
   .reveal .slides a:link {
       color: var(--link-color);

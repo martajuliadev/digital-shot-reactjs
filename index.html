@@ -107,7 +107,7 @@
                 </section>
                 <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <textarea data-template>
-                    Classes and functional components
+                    Class and functional components
 
                     ```
                     class Welcome extends React.Component {
@@ -153,28 +153,6 @@
                         Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.
                     </aside>
                 </section>
-                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                <textarea data-template>
-                        Components can have [props](https://reactjs.org/docs/components-and-props.html) & [state](https://reactjs.org/docs/state-and-lifecycle.html)
-                        
-                        ```
-                        class Timer extends React.Component {
-                            constructor(props) {
-                              super(props);
-                              this.state = { seconds: 0 };
-                            }
-                            tick() {
-                              this.setState(prevState => ({
-                                seconds: prevState.seconds + 1
-                              }));
-                            }
-                            componentDidMount() {
-                              this.interval = setInterval(() => this.tick(), 1000);
-                            }
-                        }
-                        ```
-                    </textarea>
-                </section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <h3 class="primaryFont"><a class="accent" href="https://reactjs.org/docs/introducing-jsx.html">JSX</a></h3>
                     <div style="margin-bottom: 1em" class="fragment primaryFont">Optional syntax extension commonly used in React.</div>
@@ -207,8 +185,30 @@
                             ```
                         </textarea>
                 </section>
+                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                <textarea data-template>
+                        Components can have [props](https://reactjs.org/docs/components-and-props.html) & [state](https://reactjs.org/docs/state-and-lifecycle.html)
+                        
+                        ```
+                        class Timer extends React.Component {
+                            constructor(props) {
+                              super(props);
+                              this.state = { seconds: 0 };
+                            }
+                            tick() {
+                              this.setState(prevState => ({
+                                seconds: prevState.seconds + 1
+                              }));
+                            }
+                            componentDidMount() {
+                              this.interval = setInterval(() => this.tick(), 1000);
+                            }
+                        }
+                        ```
+                    </textarea>
+                </section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <h2>Maybe some practical examples?</h2>
+                    <div class="primaryFont">Maybe some practical examples?</div>
 
                     <pre><code class="javascript" style="max-height: none" data-trim data-escape>
                         export const ComponentWithData = ({
@@ -424,7 +424,7 @@
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                 <img src="common/img/storybook.gif" style="background:none; border:none; box-shadow:none; height: 85%; width:85%;">
                 <div class="primaryFont" style="font-size: 0.7em;">Look at the live examples <a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>here</strong></a>.</div>
-                <div class="primaryFont" style="font-size: 0.7em;"><a class="accent" href="https://release-3-4--storybooks-official.netlify.com"><strong>Addons</strong></a> implement additional functionalities which make Storybook even more util.</div>
+                <div class="primaryFont" style="font-size: 0.7em;"><a class="accent" href="https://storybook.js.org/addons/addon-gallery/"><strong>Addons</strong></a> implement additional functionalities which make Storybook even more util.</div>
             </section>
     </section>
 

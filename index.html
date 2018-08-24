@@ -40,7 +40,7 @@
                         justify-content: flex-end;
                         align-items: center;
                         padding-bottom: 50px;
-            ">
+                ">
                     <img style="margin: 0; width: 20%; background: none" class="plain" src="common/img/Capgemini_Logo_Color_RGB.png" alt="Capgemini"
                     />
                 </div>
@@ -60,26 +60,33 @@
             </section>
             
             <section>
+                <style>      
+                    .reveal .slides .collage-image {
+                        margin: 20px;
+                    }
+                </style>
+
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <h2 style="font-size: 1.7em" class="primaryFont">Who use React nowadays?</h2>
+                    <h2 style="font-size: 1.7em" class="primaryFont">Who uses React nowadays?</h2>
                     <div class="collage">
-                        <img class="collage-image" src="common/img/airbnb.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <img class="collage-image" src="common/img/fb.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
-                        <img class="collage-image" src="common/img/Instagram.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
-                        <img class="collage-image" src="common/img/atlassian.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <img class="collage-image" src="common/img/whatsapp.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
-                        <img class="collage-image" src="common/img/NewYorkTimes.svg" style="background:none; border:none; box-shadow:none; height: 25%; width:25%;">
-                        <img class="collage-image" src="common/img/dropbox.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
-                        <img class="collage-image" src="common/img/twitter.svg" style="background:none; border:none; box-shadow:none; height: 10%; width:10%;">
-                        <img class="collage-image" src="common/img/netflix.svg" style="background:none; border:none; box-shadow:none; height: 20%; width:20%;">
+                        <img class="collage-image plain" src="common/img/airbnb.svg" style="height: 25%; width:25%;">
+                        <img class="collage-image plain" src="common/img/fb.svg" style="height: 10%; width:10%;">
+                        <img class="collage-image plain" src="common/img/Instagram.svg" style="height: 10%; width:10%;">
+                        <img class="collage-image plain" src="common/img/atlassian.svg" style="height: 25%; width:25%;">
+                        <img class="collage-image plain" src="common/img/whatsapp.svg" style="height: 10%; width:10%;">
+                        <img class="collage-image plain" src="common/img/NewYorkTimes.svg" style="height: 25%; width:25%;">
+                        <img class="collage-image plain" src="common/img/dropbox.svg" style="height: 10%; width:10%;">
+                        <img class="collage-image plain" src="common/img/twitter.svg" style="height: 10%; width:10%;">
+                        <img class="collage-image plain" src="common/img/netflix.svg" style="height: 20%; width:20%;">
                     </div>
-                    <p>Fb official- <a class="accent" href="https://github.com/facebook/react/wiki/Sites-Using-React
-                        ">apps in React</a></p>
+                    <p>
+                        Fb official- <a class="accent" href="https://github.com/facebook/react/wiki/Sites-Using-React">apps in React</a>
+                    </p>
                 </section>
             </section>
 
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                <div class="primaryFont">Position of React basing on <a class="accent" href="https://stateofjs.com/2017/front-end/results">stateofjs.com</a> </div>
+                <div class="primaryFont">React market share based on <a class="accent" href="https://stateofjs.com/2017/front-end/results">stateofjs.com</a> </div>
                 <img src="common/img/stateofjs.PNG">
                 <div class="fragment specialFont"><span class="accent">React</span> still as a dominant player</div>
             </section>
@@ -89,34 +96,34 @@
                     <h2 style="font-size: 1.9em">React.js </h2>
                     <p>(<a href="https://reactjs.org/">v16.4.2</a>)</p>
                     <div style="font-size: 1.1em" class="primaryFont">What is it?</div>
-                    <p class="fragment">A<span class="accent"><strong> Javascript library </strong></span>for building user interfaces.
+                    <p class="fragment">A<span class="accent"><strong> JavaScript library </strong></span>for building user interfaces.
                     </p>
-                    <p class="fragment">Not a tool, framework, language.</p>
+                    <p class="fragment">Not a tool, not a framework, not a language.</p>
                 </section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <div class="fragment primaryFont">It allows to design simple views for each state in your app</div>
-                    <div class="fragment primaryFont"><span class="accent"><strong>Components-based</strong></span></div>
+                    <div style="margin-bottom: 1em" class="fragment primaryFont">It allows to design simple views for each state in your app</div>
+                    <div style="margin-bottom: 1em" class="fragment primaryFont"><span class="accent"><strong>Component-based</strong></span></div>
                     <div class="fragment primaryFont">You can render just the right components when your data changes</div>
                 </section>
                 <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <textarea data-template>
-                    Class and functional components
+                    Classes and functional components
 
                     ```
                     class Welcome extends React.Component {
                         render() {
-                          return (
+                            return (
                             <div>
-                              Hello {this.props.name}
+                                Hello {this.props.name}
                             </div>
-                          );
+                            );
                         }
-                      }
+                    }
                     ```
                     ```
                     function Welcome(props) {
                         return <h1>Hello, {props.name}</h1>;
-                      }
+                    }
                     ```
                     </textarea>
                     <aside class="notes">
@@ -126,22 +133,19 @@
                 </section>
                 <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
                     <textarea data-template>
-                    Components can be nested one in another
+                    Components can be nested
                     ```
                       function App() {
                         return (
                           <div>
                             <Welcome name="Sara" />
                             <Welcome name="Cahal" />
-                            <Welcome name="Edite" />
+                            <AnotherWelcome> 
+                                <NameText bold>Edite</NameText>
+                            </AnotherWelcome>
                           </div>
                         );
                       }
-                      
-                      ReactDOM.render(
-                        <App />,
-                        document.getElementById('root')
-                      );
                     ```
                 </textarea>
                 <aside class="notes">
@@ -167,14 +171,15 @@
                             componentDidMount() {
                               this.interval = setInterval(() => this.tick(), 1000);
                             }
+                        }
                         ```
                     </textarea>
                 </section>
                 <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <h3 class="primaryFont">JSX</h3>
-                    <div class="fragment primaryFont"><a class="accent" href="https://reactjs.org/docs/introducing-jsx.html"><strong>JSX </strong></a> is an optional syntax extension commonly used in React.</div>
-                    <div class="fragment primaryFont">It is a syntactic sugar.</div>
-                    <div class="fragment primaryFont">It produces React “elements”.</div>
+                    <h3 class="primaryFont"><a class="accent" href="https://reactjs.org/docs/introducing-jsx.html">JSX</a></h3>
+                    <div style="margin-bottom: 1em" class="fragment primaryFont">Optional syntax extension commonly used in React.</div>
+                    <div style="margin-bottom: 1em" class="fragment primaryFont">Syntactic sugar.</div>
+                    <div class="fragment primaryFont">Produces React “elements”.</div>
 
                     <aside class="notes">
                             React uses JSX for templating instead of regular JavaScript. It is not    necessary to use it, but there are some pros that comes with it.JSX is faster because it performs optimization while compiling code to JavaScript.
@@ -202,29 +207,27 @@
                             ```
                         </textarea>
                 </section>
-                <section data-markdown data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-                    <textarea data-template>
-                        Maybe some practical examples?
-                        ```javascript
+                <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
+                    <h2>Maybe some practical examples?</h2>
+
+                    <pre><code class="javascript" style="max-height: none" data-trim data-escape>
                         export const ComponentWithData = ({
                             data: {
-                              error, loading, i18n, ...restData
+                                error, loading, i18n, ...restData
                             }, render = noop,
-                          }) => {
+                        }) => {
                             if (loading) {
-                              return <LoadingMessage />;
+                                return &lt;LoadingMessage /&gt;;
                             }
                             if (error) {
-                              return <ErrorMessage error={error} />;
+                                return &lt;ErrorMessage error={error} /&gt;;
                             }
                             if (i18n) {
-                              setTranslations(JSON.parse(i18n.all));
+                                setTranslations(JSON.parse(i18n.all));
                             }
                             return render(restData);
-                          };
-
-                          ```
-                    </textarea>
+                        };           
+                    </code></pre>
                 </section>
             </section>
 
@@ -290,17 +293,17 @@
                             const divStyle = {
                                 margin: '40px',
                                 border: '5px solid pink'
-                              };
-                              const pStyle = {
+                            };
+                            const pStyle = {
                                 fontSize: '15px',
                                 textAlign: 'center'
-                              };
-                              
-                              const Box = () => (
+                            };
+                            
+                            const Box = () => (
                                 <div style={divStyle}>
-                                  <p style={pStyle}>Get started with inline style</p>
+                                    <p style={pStyle}>Get started with inline style</p>
                                 </div>
-                              );
+                            );
                             ```
                     </textarea>    
                 </section>
@@ -309,13 +312,13 @@
                         CSS stylesheets
                         ```
                         import React from 'react';
-                            import './DottedBox.css';
-                            
-                            const DottedBox = () => (
-                              <div className="dotted-box">
+                        import './DottedBox.css';
+                        
+                        const DottedBox = () => (
+                            <div className="dotted-box">
                                 <p className="dotted-box-content">CSS styling</p>
-                              </div>
-                            );
+                            </div>
+                        );
                         ```
                     </textarea>
                 </section>
@@ -327,9 +330,9 @@
                         import styles from './DashedBox.css';
                         
                         const DashedBox = () => (
-                        <div className={styles.container}>
-                            <p className={styles.content}>CSS Modules</p>
-                        </div>
+                            <div className={styles.container}>
+                                <p className={styles.content}>CSS Modules</p>
+                            </div>
                         );
                         ```
                     </textarea>
@@ -345,7 +348,7 @@
                         ```
                         const BasicZone = ({ text }) => (
                             <div>
-                            {text}
+                                {text}
                             </div>
                         );
                         
@@ -384,6 +387,7 @@
                         font-stretch: normal;
                         line-height: normal;
                         letter-spacing: normal;
+                    `;
                     ```
                 </textarea>
             </section>
@@ -398,9 +402,9 @@
                 <div class="specialFont" style="font-size: 0.7em;">⬆️ Just use it </div>
             </section>
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-               <div class="fragment primaryFont">npm install -g create-react-app</div>
-               <div class="fragment primaryFont">create-react-app /app-name/</div>
-               <div class="fragment primaryFont">cd /app-name/</div>
+               <div style="margin-bottom: 1em" class="fragment primaryFont">npm install -g create-react-app</div>
+               <div style="margin-bottom: 1em" class="fragment primaryFont">create-react-app /app-name/</div>
+               <div style="margin-bottom: 1em" class="fragment primaryFont">cd /app-name/</div>
                <div class="fragment primaryFont">npm start</div>
             </section>
             <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
@@ -431,7 +435,7 @@
     </section>
     
     <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
-        <div class="specialFont" style="font-size: 1.2em;"><strong>Project DW ROAD</strong></div>
+        <div class="specialFont" style="font-size: 1.2em;"><strong>Project ROAD</strong></div>
         <div class="dw-row"> 
                 <div class="dw-column">
                     <img class="collage-image" src="common/img/react.svg" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
@@ -439,9 +443,9 @@
                         <img class="collage-image" src="common/img/styled-components.png" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
                         <img class="collage-image" src="common/img/boostrap.svg" style="background:none; border:none; box-shadow:none; height: auto; width:45%;">
                 </div>
-                <div class="dw-column">
-                        <img src="common/img/dw-team1.jpg" style="width: 80%; height: auto;">
-                        <img src="common/img/dw-team2.jpg" style="width: 80%; height: auto;">
+                <div class="dw-column" style="padding-top: 2em">
+                        <img class="plain" src="common/img/dw-team1.jpg" style="width: 80%; height: auto;">
+                        <img class="plain" src="common/img/the-team.jpg" style="width: 80%; height: auto;">
                     </div>
                 <div class="dw-column">
                     <img class="collage-image" src="common/img/nodejs.svg" style="background:none; border:none; box-shadow:none; height: auto; width:100%;">
@@ -458,11 +462,11 @@
     <section data-background-image="common/img/bg.svg" data-background-size="260px" data-background-repeat="repeat">
         <div style="display:flex; 
                     justify-content: flex-end;
-                    align-items: center;
-                    margin-bottom: 100px;
-                    ">
+                    align-items: center;"
+        >
             <img style="margin: 0; width: 20%; background: none" class="plain" src="common/img/Capgemini_Logo_Color_RGB.png" alt="Capgemini"/>
         </div>
+        <img  style="height: 10em;" class="plain" src="common/img/slides-qr-code.svg" alt="">
         <div style="font-size: 0.9em;">Finally there is a special time for questions and discussion.</div>
         <div style="font-size: 0.9em;">Thank you! 💙</div>
     </section>

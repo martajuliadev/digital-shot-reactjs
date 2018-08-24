@@ -234,10 +234,6 @@
       align-items: center;
   }
 
-  .collage-image {
-    margin: 20px !important;
-  }
-
   /* ----------------------------------------------------------------------------------------- */
 
   .dw-row {
@@ -250,7 +246,6 @@
   .dw-column {
     flex: 33%;
     max-width: 33%;
-    padding: 0 4px;
   }
   
   .dw-column img, .dw-column span {
